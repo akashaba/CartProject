@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Place</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script>
+        // localStorage.setItem('loggedIn', true);
+        if(!localStorage.getItem('loggedIn')) {
+    window.location.href = '../client/index.html'; // Redirect to login page if user is not logged in
+}
+// const welcome = document.getElementById('welcome');
+// console.log(welcome.innerHTML= `${sessionStorage.getItem('username')}`);
+    </script>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1 fw-bold"><img src="./image/istockphoto-1206806317-612x612.jpg" width="100px" height="auto" alt="">Kiban</a>
+          <form class="d-flex" role="search">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <p class="fs-3 fw-medium p-2" > <span class="fs-3 fw-medium mr-3" id="welcome"></span></p>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" id="signoutBtn">Sign Out</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container">
+        <h3>Product List</h3>
+        <div></div>
+        <table class="table table-striped m-3" id="tableProducts">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Image</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyProductList">
+             
+            </tbody >
+          </table>
+
+          <h3 class="m-3">Your shopping Cart</h3>
+          <p id="shoppingcart"></p>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th scope="col">Quantity</th>
+                
+              </tr>
+            </thead>
+            <tbody id="tbodyCat">
+             
+            </tbody>
+            <tbody id="totalPrice"></tbody>
+          </table>
+          <p class="fs-3" id="empty-cart-msg" style="display: block;">There is no item in your shopping Cart!!</p>
+          <button type="button" class="btn btn-outline-success" id="btnOrder">Place Order</button>
+      </div>
+
+      <script src="./js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

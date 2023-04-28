@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akashaba Brian</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script>
+        // localStorage.setItem('loggedIn', false);
+    //     if(localStorage.getItem('loggedIn')) {
+    // window.location.href = '../client/product.html'; // Redirect to protected page if user is already logged in
+// }
+
+    </script>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1 fw-bold"> <img src="./image/istockphoto-1206806317-612x612.jpg" width="100px" height="auto" alt=""> Kiban</a>
+          <form class="d-flex" role="search">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          </form>
+        </div>
+      </nav>
+      <p class="text-center fs-1 fw-bold">Welcome to My Store</p>
+
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="username" class="form-label">UserName</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                  </div>
+                  <div id="error-message" style="display:none;color:red;">Invalid email or password.</div>
+            </div>
+            <div class="modal-footer">
+              
+              <button type="button" id="btnLogin" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<script src="./js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
